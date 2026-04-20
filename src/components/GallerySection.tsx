@@ -1,43 +1,28 @@
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
-
-const images = [
-  { src: gallery1, alt: "Balayage loiro com ondas suaves", label: "Coloração" },
-  { src: gallery2, alt: "Penteado de noiva elegante", label: "Noivas" },
-  { src: gallery3, alt: "Skincare e produtos premium", label: "Skincare" },
-  { src: gallery4, alt: "Cabelo ruivo vibrante", label: "Cor Fashion" },
-  { src: gallery5, alt: "Manicure rosa nude elegante", label: "Manicure" },
-  { src: gallery6, alt: "Cabelo liso brilhante longo", label: "Hair Styling" },
-];
+import { siteConfig } from "@/config/site";
 
 export function GallerySection() {
+  const { gallerySection } = siteConfig;
+
   return (
     <section id="gallery" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-primary text-sm tracking-[0.3em] uppercase mb-4">
-            Portfólio
+            {gallerySection.tagline}
           </p>
           <h2 className="text-4xl md:text-5xl text-foreground mb-6">
-            Resultados que falam por si
+            {gallerySection.title}
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Cada transformação é uma assinatura. Conheça alguns dos nossos
-            trabalhos mais recentes — feitos com técnica, cuidado e arte.
+            {gallerySection.description}
           </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {images.map((image, index) => (
+          {gallerySection.images.map((image, index) => (
             <div
               key={image.src}
-              className={`group relative overflow-hidden rounded-2xl bg-muted ${
-                index === 0 || index === 5 ? "md:row-span-2 aspect-[3/4] md:aspect-[3/5]" : "aspect-[3/4]"
-              }`}
+              className="group relative overflow-hidden rounded-2xl bg-muted aspect-[3/4]"
             >
               <img
                 src={image.src}

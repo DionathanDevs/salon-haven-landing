@@ -1,32 +1,18 @@
-const testimonials = [
-  {
-    name: "Sophia M.",
-    text: "SoHo transformed not just my hair, but my entire confidence. The team is incredibly talented and so warm.",
-    service: "Hair & Color",
-  },
-  {
-    name: "Elena R.",
-    text: "My bridal experience was pure magic. Every detail was perfect — I felt like the most beautiful version of myself.",
-    service: "Bridal Package",
-  },
-  {
-    name: "Ava T.",
-    text: "I've been coming here for 3 years and I'll never go anywhere else. The facials are heavenly.",
-    service: "Skincare",
-  },
-];
+import { siteConfig } from "@/config/site";
 
 export function TestimonialsSection() {
+  const { testimonialsSection } = siteConfig;
+
   return (
     <section className="section-padding bg-card">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-primary tracking-[0.3em] uppercase text-sm mb-3">Testimonials</p>
-          <h2 className="text-4xl md:text-5xl text-foreground">What They Say</h2>
+          <p className="text-primary tracking-[0.3em] uppercase text-sm mb-3">{testimonialsSection.tagline}</p>
+          <h2 className="text-4xl md:text-5xl text-foreground">{testimonialsSection.title}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t) => (
+          {testimonialsSection.testimonials.map((t) => (
             <div
               key={t.name}
               className="p-8 rounded-2xl bg-blush/30 border border-border"

@@ -8,14 +8,15 @@ import { AboutSection } from "@/components/AboutSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
+import { siteConfig } from "@/config/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SoHo Salon — Beauty & Wellness for Women" },
-      { name: "description", content: "SoHo is a luxury salon for women offering hair styling, skincare, bridal packages, and spa treatments in New York." },
-      { property: "og:title", content: "SoHo Salon — Beauty & Wellness for Women" },
-      { property: "og:description", content: "Where elegance meets artistry. A sanctuary dedicated to revealing your most radiant self." },
+      { title: siteConfig.headTitle },
+      { name: "description", content: siteConfig.headDescription },
+      { property: "og:title", content: siteConfig.headTitle },
+      { property: "og:description", content: siteConfig.headDescription },
     ],
   }),
   component: Index,

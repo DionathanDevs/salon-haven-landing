@@ -6,4 +6,10 @@
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-export default defineConfig();
+export default defineConfig({
+    vite: {
+        // Allows deployment to GitHub Pages on absolute roots or configurable base paths.
+        // Replace '/' with '/your-repo-name/' if you are not using a custom domain.
+        base: process.env.VITE_BASE_PATH || "/",
+    }
+});
