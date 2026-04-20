@@ -12,7 +12,7 @@ export function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          {["Services", "About", "Contact"].map((item) => (
+          {["Services", "Gallery", "Salon", "About", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -43,7 +43,7 @@ export function Navbar() {
 
       {open && (
         <div className="md:hidden bg-foreground/95 backdrop-blur-lg border-t border-primary-foreground/10 px-6 py-6 space-y-4">
-          {["Services", "About", "Contact"].map((item) => (
+          {["Services", "Gallery", "Salon", "About", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
