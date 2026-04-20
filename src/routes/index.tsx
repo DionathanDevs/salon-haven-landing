@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -10,19 +10,9 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/config/site";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: siteConfig.headTitle },
-      { name: "description", content: siteConfig.headDescription },
-      { property: "og:title", content: siteConfig.headTitle },
-      { property: "og:description", content: siteConfig.headDescription },
-    ],
-  }),
-  component: Index,
-});
 
-function Index() {
+
+export default function Index() {
   return (
     <div className="min-h-screen">
       <Navbar />

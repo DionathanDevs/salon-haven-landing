@@ -15,11 +15,11 @@ Todo o texto, imagens principais e informações do salão foram abstraídos par
 3. **Substituir Imagens Diretamente:**
    As imagens estão salvas na pasta `src/assets/`. Você pode simplesmente colocar as imagens dos seus clientes com os mesmos nomes dos arquivos existentes para substituí-las de forma rápida, ou adicionar novas ali e importar no `src/config/site.ts`.
 
-## Como Publicar no GitHub Pages (Demonstração)
+## Como Publicar no GitHub Pages (Sem Cloudflare)
 
-Este projeto já está configurado com um fluxo automatizado do GitHub Actions. 
-Siga os passos abaixo para que ele apareça online:
+Este projeto foi reconfigurado para ser 100% estático, perfeito para hospedar de graça e diretamente no GitHub Pages, sem depender de plataformas de terceiros.
 
 1. **Crie um repositório no GitHub** e faça o push de todo este código para lá.
-2. Certifique-se de que no arquivo `vite.config.ts`, a configuração baseada no nome do seu repositório está setada, se o seu repositório não estiver na raiz do domínio. Por padrão a action faz build na pasta `dist/`. *(Observação: Devido ao uso de rotas absolutas do TanStack Router, é mais recomendado utilizar um subdomínio próprio, ou hospedar pelo Cloudflare/Netlify se houver bugs no GitHub Pages em diretórios profundos. Para Github Pages, acesse: Settings > Pages e confirme o Deploy via GitHub Actions).*
-3. Sempre que houver um commit e *push* na branch `main` ou `master`, o GitHub construirá sua aplicação sozinho (aba **Actions**) e liberará o link de demonstração automaticamente.
+2. Certifique-se de que no arquivo `vite.config.ts`, a base URL foi ajustada se o seu repositório não for a raiz (por exemplo, se seu repo chama "salao", coloque `base: '/salao/'`).
+3. Vá em **Settings > Pages**. Na opção "Build and deployment / Source", altere para **GitHub Actions** em vez de Deploy from a branch.
+4. Sempre que houver um commit e *push* na branch `main` ou `master`, o GitHub construirá sua aplicação sozinho e publicará o site grátis pelo Github Actions.
