@@ -1,12 +1,34 @@
+import { useState, useEffect } from "react";
 import { siteConfig } from "@/config/site";
 
 export function WhatsAppButton() {
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // No mobile (window.innerWidth < 768), oculta se o scroll for menor que 100
+            if (window.innerWidth < 768) {
+                setIsVisible(window.scrollY > 100);
+            } else {
+                setIsVisible(true);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        // Chama uma vez para definir o estado inicial
+        handleScroll();
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    if (!isVisible) return null;
+
     return (
         <a
             href={siteConfig.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:bg-[#128C7E] transition-all duration-300 hover:scale-110 flex items-center justify-center animate-fade-up"
+            className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:bg-[#128C7E] transition-all duration-300 hover:scale-110 flex items-center justify-center animate-fade-up md:animate-none"
             aria-label="Fale conosco no WhatsApp"
             title="Fale conosco no WhatsApp"
         >
