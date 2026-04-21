@@ -26,14 +26,14 @@ export function SalonSection() {
               loading="lazy"
               width={1280}
               height={896}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <h3 className="text-2xl md:text-3xl text-primary-foreground mb-1">
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 z-10">
+              <h3 className="text-2xl md:text-3xl text-primary font-heading tracking-wide mb-1">
                 {salonSection.images[0].title}
               </h3>
-              <p className="text-primary-foreground/80 text-sm">
+              <p className="text-foreground/90 text-sm">
                 {salonSection.images[0].subtitle}
               </p>
             </div>
@@ -49,12 +49,12 @@ export function SalonSection() {
                 height={1024}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <h3 className="text-xl text-primary-foreground mb-0.5">
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 z-10">
+                <h3 className="text-xl text-primary font-heading tracking-wide mb-0.5">
                   {salonSection.images[1].title}
                 </h3>
-                <p className="text-primary-foreground/80 text-xs">
+                <p className="text-foreground/90 text-xs">
                   {salonSection.images[1].subtitle}
                 </p>
               </div>
@@ -69,12 +69,12 @@ export function SalonSection() {
                 height={1024}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <h3 className="text-xl text-primary-foreground mb-0.5">
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 z-10">
+                <h3 className="text-xl text-primary font-heading tracking-wide mb-0.5">
                   {salonSection.images[2].title}
                 </h3>
-                <p className="text-primary-foreground/80 text-xs">
+                <p className="text-foreground/90 text-xs">
                   {salonSection.images[2].subtitle}
                 </p>
               </div>

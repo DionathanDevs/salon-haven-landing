@@ -1,13 +1,10 @@
-import heroImage from "@/assets/hero-salon.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
-import salon1 from "@/assets/salon-interior-1.jpg";
-import salon2 from "@/assets/salon-interior-2.jpg";
-import salon3 from "@/assets/salon-interior-3.jpg";
+import heroImage from "@/assets/harmoniza-dona.png";
+import mobileHeroImage from "@/assets/harmoniza-dona.png";
+import doutoraHarmoniza from "@/assets/doutora-harmoniza.png";
+import tecPonta from "@/assets/tec-ponta.png";
+import resultado1 from "@/assets/resultado1.png";
+import resultado2 from "@/assets/resultado2.png";
+import harmonizaLocal from "@/assets/harmoniza-local.png";
 
 /**
  * SALON CONFIGURATION FILE
@@ -18,10 +15,10 @@ import salon3 from "@/assets/salon-interior-3.jpg";
 
 export const siteConfig = {
     // Informações Gerais
-    salonName: "Salon",
-    salonFullName: "Salon Beauty",
-    headTitle: "Salon — Beleza & Bem-estar",
-    headDescription: "Salon é um salão de beleza de luxo oferecendo penteados, cuidados com a pele, pacotes para noivas e tratamentos maravilhosos.",
+    salonName: "Dra. Laira Munik",
+    salonFullName: "Dra. Laira Munik | Harmonização Facial em Curitiba",
+    headTitle: "Dra. Laira Munik | Harmonização Facial",
+    headDescription: "+2.000 rostos transformados com o Protocolo Golden Face✨",
 
     whatsappLink: "https://wa.me/5541987928174",
 
@@ -38,55 +35,38 @@ export const siteConfig = {
     // Seção Hero (Banner)
     hero: {
         image: heroImage,
-        imageAlt: "Salon — experiência de beleza",
-        tagline: "Beleza & Bem-Estar",
-        title: "Salon",
-        subtitle: "Onde a elegância encontra a arte. Um santuário dedicado a revelar o seu lado mais radiante.",
+        mobileImage: mobileHeroImage,
+        imageAlt: "Dra. Laira Munik — Especialista em Harmonização Facial",
+        tagline: "Protocolo Golden Face✨ | CRO/PR 26635",
+        title: "Dra. Laira Munik",
+        subtitle: "A referência em Harmonização Facial em Curitiba. Descubra a sua versão mais radiante e natural.",
         primaryButtonText: "Agendar Agora",
         secondaryButtonText: "Nossos Serviços",
     },
 
     // Seção de Serviços
     servicesSection: {
-        tagline: "O Que Oferecemos",
-        title: "Nossos Serviços",
+        tagline: "Especialidades",
+        title: "Procedimentos de Alto Padrão",
         services: [
             {
-                title: "Corte e Estilização",
-                description: "De cortes precisos a ondas fluidas, nossos estilistas criam visuais que chamam a atenção.",
+                title: "Protocolo Golden Face",
+                description: "Nosso procedimento de assinatura que realça seus contornos de forma luxuosa, natural e segura.",
                 icon: "✦",
-                price: "A partir de R$ 150",
+                price: "Avaliação Personalizada",
             },
             {
-                title: "Coloração e Mechas",
-                description: "Balayage, ombré ou coloração clássica — damos vida e cor à sua visão.",
+                title: "Planejamento Completo e Individualizado",
+                description: "Avaliação especializada detalhada para tratar todas as camadas da sua pele, garantindo saúde facial a longo prazo.",
                 icon: "◈",
-                price: "A partir de R$ 350",
+                price: "Agende sua Consulta",
             },
             {
-                title: "Cuidados com a Pele",
-                description: "Tratamentos faciais rejuvenescedores que deixam sua pele incrível e brilhante.",
+                title: "Alta Performance em Estética",
+                description: "Integração das melhores tecnologias e preenchedores de última geração para realçar sua autoestima.",
                 icon: "❋",
-                price: "A partir de R$ 200",
-            },
-            {
-                title: "Unhas e Beleza",
-                description: "Manicures, pedicures e nail art com atenção meticulosa aos detalhes.",
-                icon: "✿",
-                price: "A partir de R$ 80",
-            },
-            {
-                title: "Dia da Noiva",
-                description: "Pacotes completos para noivas, para o dia mais inesquecível da sua vida.",
-                icon: "♡",
-                price: "A partir de R$ 1200",
-            },
-            {
-                title: "Massagem e Spa",
-                description: "Alivie a tensão com nossos tratamentos relaxantes mágicos de assinatura.",
-                icon: "❁",
-                price: "A partir de R$ 180",
-            },
+                price: "Atendimento Premium",
+            }
         ]
     },
 
@@ -96,12 +76,12 @@ export const siteConfig = {
         title: "Resultados que falam por si",
         description: "Cada transformação é uma assinatura. Conheça alguns dos nossos trabalhos mais recentes — feitos com técnica, cuidado e arte.",
         images: [
-            { src: gallery1, alt: "Balayage loiro com ondas suaves", label: "Coloração" },
-            { src: gallery2, alt: "Penteado de noiva elegante", label: "Noivas" },
-            { src: gallery3, alt: "Skincare e produtos premium", label: "Skincare" },
-            { src: gallery4, alt: "Cabelo ruivo vibrante", label: "Cor Fashion" },
-            { src: gallery5, alt: "Manicure rosa nude elegante", label: "Manicure" },
-            { src: gallery6, alt: "Cabelo liso brilhante longo", label: "Hair Styling" },
+            { src: resultado1, alt: "Resultado de Harmonização Facial 1", label: "Golden Face" },
+            { src: resultado2, alt: "Resultado de Harmonização Facial 2", label: "Contorno Facial" },
+            { src: resultado1, alt: "Resultado de Harmonização Facial 3", label: "Golden Face" },
+            { src: resultado2, alt: "Resultado de Harmonização Facial 4", label: "Rejuvenescimento" },
+            { src: resultado1, alt: "Resultado de Harmonização Facial 5", label: "Protocolo Luxo" },
+            { src: resultado2, alt: "Resultado de Harmonização Facial 6", label: "Estética Avançada" },
         ]
     },
 
@@ -109,42 +89,42 @@ export const siteConfig = {
     salonSection: {
         tagline: "Nosso Espaço",
         title: "Um refúgio para você",
-        description: "Projetado para acolher e encantar — cada detalhe do nosso salão foi pensado para que seu momento de beleza seja também um momento de paz.",
+        description: "Projetado para acolher e encantar — cada detalhe da nossa clínica foi pensado para que seu momento de luxo seja inesquecível.",
         images: [
             {
-                src: salon1,
-                alt: "Área de estilização do salão Salon com cadeiras elegantes e mármore",
-                title: "Estúdio principal",
-                subtitle: "Onde a magia acontece"
+                src: doutoraHarmoniza,
+                alt: "Dra. Laira Munik",
+                title: "Dra. Laira Munik",
+                subtitle: "Atendimento especializado"
             },
             {
-                src: salon2,
-                alt: "Recepção elegante do salão com flores",
-                title: "Recepção",
-                subtitle: "Bem-vinda ao Salon"
+                src: harmonizaLocal,
+                alt: "Ambiente sofisticado",
+                title: "Luxo e Conforto",
+                subtitle: "Hospitalidade VIP"
             },
             {
-                src: salon3,
-                alt: "Sala de spa e tratamentos faciais com iluminação suave",
-                title: "Spa & Skincare",
-                subtitle: "Tranquilidade absoluta"
+                src: tecPonta,
+                alt: "Consultório exclusivo",
+                title: "Tecnologia de Ponta",
+                subtitle: "Ambiente Impecável"
             }
         ]
     },
 
     // Seção "Sobre Nós"
     aboutSection: {
-        tagline: "Nossa História",
-        title: "Feito com \nPaixão e Cuidado",
+        tagline: "Sobre a Especialista",
+        title: "Experiência \ne Excelência",
         paragraphs: [
-            "No Salon, acreditamos que a beleza é uma experiência, e não apenas um resultado. Fundado com a visão de criar um espaço caloroso e acolhedor onde cada mulher se sente celebrada, nossa equipe de estilistas premiados e especialistas em beleza traz décadas de experiência técnica combinada.",
-            "A partir do momento em que você passa por nossas portas, você será envolvida em uma atmosfera de luxo calmo — música suave, essências aromáticas e a essência da verdadeira arte capilar."
+            "Com dedicação absoluta ao Protocolo Golden Face, meu objetivo é realçar a sua beleza de forma natural, luxuosa e segura. Priorizamos resultados elegantes que elevam a sua autoestima e valorizam seus traços únicos.",
+            "São milhares de pacientes que confiaram em nossos procedimentos, conquistando uma estética facial balanceada com a melhor tecnologia e cuidados disponíveis."
         ],
         stats: [
-            { value: "12+", label: "Anos de Excelência" },
-            { value: "5K", label: "Clientes Satisfeitas" },
-            { value: "15", label: "Especialistas" },
-            { value: "4.9", label: "Estrelas (Avaliação)" },
+            { value: "387", label: "Posts no Instagram" },
+            { value: "10,6 Mil", label: "Seguidores" },
+            { value: "+2.000", label: "Rostos Transformados" },
+            { value: "26635", label: "CRO/PR" },
         ]
     },
 
@@ -155,7 +135,7 @@ export const siteConfig = {
         testimonials: [
             {
                 name: "Sofia M.",
-                text: "O Salon transformou não apenas meu cabelo, mas toda a minha confiança. A equipe é incrivelmente talentosa e amável.",
+                text: "O Reflexos da Beleza transformou não apenas meu cabelo, mas toda a minha confiança. A equipe é incrivelmente talentosa e amável.",
                 service: "Corte & Coloração",
             },
             {
@@ -175,13 +155,13 @@ export const siteConfig = {
     contactSection: {
         tagline: "Fale Conosco",
         title: "Agende sua Visita",
-        description: "Pronta para vivenciar a experiência Salon? Agende seu horário hoje mesmo ou passe em nosso salão. Adoraríamos receber você.",
+        description: "Pronta para vivenciar a experiência Reflexos? Agende seu horário hoje mesmo ou passe em nosso espaço botânico. Adoraríamos receber você.",
         primaryButtonText: "Agendar Horário",
         secondaryButtonText: "Ligue para nós",
         infoBlocks: [
             {
                 title: "Localização",
-                lines: ["Avenida das Flores, 450", "São José dos Pinhais, PR"]
+                lines: ["Rua das Flores, Centro", "Curitiba, PR"]
             },
             {
                 title: "Horário de Funcionamento",

@@ -16,9 +16,9 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-colors duration-300 border-b ${isScrolled
-          ? "bg-background/95 border-border shadow-sm text-foreground"
-          : "bg-foreground/10 border-primary-foreground/10 text-primary-foreground"
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300 border-b bg-background/95 text-foreground ${isScrolled
+        ? "border-border shadow-sm"
+        : "border-transparent"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
@@ -31,10 +31,7 @@ export function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className={`text-sm tracking-wide transition-colors ${isScrolled
-                  ? "text-foreground/70 hover:text-foreground"
-                  : "text-primary-foreground/70 hover:text-primary-foreground"
-                }`}
+              className="text-sm tracking-wide transition-colors text-foreground/70 hover:text-foreground"
             >
               {item.label}
             </a>
@@ -42,8 +39,7 @@ export function Navbar() {
           <Button
             variant="hero"
             size="sm"
-            className={`rounded-full px-6 ${isScrolled ? "bg-primary text-primary-foreground hover:bg-primary/90" : ""
-              }`}
+            className="rounded-full px-6 bg-primary text-primary-foreground hover:bg-primary/90"
             onClick={() => window.open(siteConfig.whatsappLink, '_blank')}
           >
             {siteConfig.bookNowText}
@@ -66,19 +62,13 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className={`md:hidden backdrop-blur-lg border-t px-6 py-6 space-y-4 ${isScrolled
-            ? "bg-background/95 border-border shadow-md"
-            : "bg-foreground/95 border-primary-foreground/10"
-          }`}>
+        <div className={`md:hidden backdrop-blur-lg border-t px-6 py-6 space-y-4 bg-background/95 border-border shadow-md`}>
           {siteConfig.navLinks.map((item) => (
             <a
               key={item.label}
               href={item.href}
               onClick={() => setOpen(false)}
-              className={`block text-sm tracking-wide ${isScrolled
-                  ? "text-foreground/70 hover:text-foreground"
-                  : "text-primary-foreground/70 hover:text-primary-foreground"
-                }`}
+              className="block text-sm tracking-wide transition-colors text-foreground/70 hover:text-foreground"
             >
               {item.label}
             </a>
@@ -86,8 +76,7 @@ export function Navbar() {
           <Button
             variant="hero"
             size="sm"
-            className={`rounded-full px-6 w-full mt-2 ${isScrolled ? "bg-primary text-primary-foreground hover:bg-primary/90" : ""
-              }`}
+            className="rounded-full px-6 w-full mt-2 bg-primary text-primary-foreground hover:bg-primary/90"
             onClick={() => window.open(siteConfig.whatsappLink, '_blank')}
           >
             {siteConfig.bookNowText}

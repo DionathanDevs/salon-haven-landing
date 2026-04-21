@@ -8,11 +8,8 @@ import { AboutSection } from "@/components/AboutSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { siteConfig } from "@/config/site";
-
-
-
-export default function Index() {
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { siteConfig } from "@/config/site"; export default function Index() {
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -24,6 +21,7 @@ export default function Index() {
       <TestimonialsSection />
       <ContactSection />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
